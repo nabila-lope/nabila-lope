@@ -1,41 +1,165 @@
 body {
-  background: #000;
-  overflow: hidden;
-}
-.container-sky {
-  width: 100%;
-  min-height: 100%;
-  background: rgb(0, 0, 0);
-}
-.lantran-all {
-  position: absolute;
-  bottom: -5%;
-  left: 0;
-  animation: fly 10s infinite linear;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, #fbe9aa, #f2d881);
 }
 
-.lantran {
-  bottom: 0;
-  left: 0% !important;
-  animation: fly 10s infinite linear;
-}
-.lantran1 {
-  bottom: 0;
-  left: 10% !important;
-  animation: fly 20s infinite linear;
+:root {
+  --blue-background: #18c7ed;
+  --green-background: #01b6c8;
+  --dark-purple-background: #5d3ee2;
+  --light-purple-background: #7961fc;
+  --yellow-flower: #fffc0d;
+  --red-flower: #e23242;
+  --pink-flower: #f98893;
+  --fuchsia-background: #cc126f;
+  --light-fuchsia-background: #d06897;
+  --dark-blue-purple-background: #4b76b5;
+  --light-blue-purple-background: #817ecb;
+  --light-pink-background: #d4bfcc;
 }
 
-@keyframes fly {
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.colorset1 {
+  stroke: var(--blue-background);
+  fill: var(--blue-background);
+  animation-name: changeColorSetOne;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.colorset2 {
+  stroke: var(--green-background);
+  fill: var(--green-background);
+  animation-name: changeColorSetTwo;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.colorset3 {
+  stroke: var(--dark-purple-background);
+  fill: var(--dark-purple-background);
+  animation-name: changeColorSetThree;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.colorset4 {
+  stroke: var(--light-purple-background);
+  fill: var(--light-purple-background);
+  animation-name: changeColorSetFour;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#wingy-right {
+  animation-name: changeWing;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform-origin: 870px 427px;
+  animation-direction: alternate;
+}
+
+#wingy-left {
+  animation-name: changeWing;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform-origin: 455px 423px;
+  animation-direction: alternate;
+}
+
+.flower-center {
+  stroke: var(--yellow-flower);
+  fill: var(--yellow-flower);
+}
+
+.flower-red {
+  stroke: var(--red-flower);
+  fill: var(--red-flower);
+}
+
+.flower-pink {
+  stroke: var(--pink-flower);
+  fill: var(--pink-flower);
+  animation-name: changeColorSetFive;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes changeColorSetOne {
   0% {
-    left: 0%;
-    bottom: -5%;
-  }
-  50% {
-    left: 0%;
-    bottom: 50%;
+    fill: var(--blue-background);
+    stroke: var(--blue-background);
   }
   100% {
-    left: 0%;
-    bottom: 100%;
+    fill: var(--fuchsia-background);
+    stroke: var(--fuchsia-background);
+  }
+}
+
+@keyframes changeColorSetTwo {
+  0% {
+    fill: var(--green-background);
+    stroke: var(--green-background);
+  }
+  100% {
+    fill: var(--light-fuchsia-background);
+    stroke: var(--light-fuchsia-background);
+  }
+}
+
+@keyframes changeColorSetThree {
+  0% {
+    fill: var(--dark-purple-background);
+    stroke: var(--dark-purple-background);
+  }
+  100% {
+    fill: var(--dark-blue-purple-background);
+    stroke: var(--dark-blue-purple-background);
+  }
+}
+
+@keyframes changeColorSetFour {
+  0% {
+    fill: var(--light-purple-background);
+    stroke: var(--light-purple-background);
+  }
+  100% {
+    fill: var(--light-blue-purple-background);
+    stroke: var(--light-blue-purple-background);
+  }
+}
+
+@keyframes changeColorSetFive {
+  0% {
+    fill: var(--pink-flower);
+    stroke: var(--pink-flower);
+  }
+  100% {
+    fill: var(--light-pink-background);
+    stroke: var(--light-pink-background);
+  }
+}
+
+@keyframes changeWing {
+  100% {
+    transform: rotateX(50deg);
   }
 }
