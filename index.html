@@ -1,73 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<div class="container">
-		<svg id="tsuru" class="container" width="500" height="500">
-    <g id="tsuru-origami" transform="scale(0.5)">
-			<path id="head" class="colorset1" d="M530,195 L454.5,238 L519,230 Z" />
-			<path id="neck" class="colorset2" d="M530,195 L556.5,227.5 L549,425 L525,427 L424,528 Z" />
-			<path id="body" class="colorset3" d="M424,528 L525.5,632 L599,592 L525,427 Z"  />
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-			<g id="wingy-right">
-			<path id="right-upper-wing" class="colorset1"  d="M525,427 L959,250 L870,427 Z" />
-				<g id="flower4" transform="translate(290,-60) scale(0.9)">
-				<path class="flower-pink" d="M583,465.5 Q581,435 608,446 Q637,432 635,463.5 Q656,486 626,494.5 Q611.5,521 594,495 Q565,489 583,465.5" />
-				<circle class="flower-center" cx="609.5" cy="473" r="7" />
-				</g>
-			</g>
-			<path id="right-lower-wing" class="colorset4" d="M525,427 L870,427 L599,592 Z" />
-			<path id="left-lower-wing" class="colorset3" d="M344,378.5 L455,423 L456,427 L432.5,499 Z" />
-			<g id="wingy-left">
-				<path id="left-upper-wing" class="colorset1"  d="M344,378.5 L325,218 L455,423 Z" />
-				<g id="flower9" transform="translate(120,150) scale(0.4)">
-					<path class="flower-red" d="M583,465.5 Q581,435 608,446 Q637,432 635,463.5 Q656,486 626,494.5 Q611.5,521 594,495 Q565,489 583,465.5" />
-					<circle class="flower-center" cx="609.5" cy="473" r="7" />
-				</g>
-			</g>
-			<path id="tail-lower"  class="colorset2" d="M525.5,632 L599,592 L641,632.5 L641,710.7 Z" />
-			<path id="tail-middle" class="colorset1"  d="M641,632.5 L641,767 L675,768.5 L688,677 Z" />
-			<path id="tail-upper" class="colorset4" d="M675,768.5 L732,774 L678.2,748.5 Z"  />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://use.fontawesome.com/2aea26af92.js"></script> -->
+    <title>Billaa</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.js"
+      integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk="
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-			<g id="flower1">
-				<path id="flowe1-petal" class="colorset1" d="M583,465.5 Q581,435 608,446 Q637,432 635,463.5 Q656,486 626,494.5 Q611.5,521 594,495 Q565,489 583,465.5" />
-				<circle class="flower-center" cx="609.5" cy="473" r="7" />				
-			</g>
+  <!-- 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 -->
 
-			<g id="flower2" transform="translate(279,282) scale(0.6) rotate(-9)">
-				<path class="colorset1" d="M583,465.5 Q581,435 608,446 Q637,432 635,463.5 Q656,486 626,494.5 Q611.5,521 594,495 Q565,489 583,465.5" />
-				<circle class="flower-center" cx="609.5" cy="473" r="7" />
-			</g>
-			<g id="flower3" transform="translate(320,205) scale(0.65) rotate(-7)">
-				<path class="flower-red" d="M583,465.5 Q581,435 608,446 Q637,432 635,463.5 Q656,486 626,494.5 Q611.5,521 594,495 Q565,489 583,465.5" />
-				<circle class="flower-center" cx="609.5" cy="473" r="7" />
-			</g>
+  <body style="background-color: #FFFFFF">
+    <div
+      style="
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div style="opacity: 0; position: absolute" id="tutupContent" class="fadeInAnimated">
+        <lottie-player
+          src="https://assets5.lottiefiles.com/private_files/lf30_rc6evhf4.json"
+          background="transparent"
+          speed="1"
+          style="width: 350px; height: 350px"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
 
-			<g id="flower5" transform="translate(90,210) scale(0.7)">
-				<path class="flower-pink" d="M583,465.5 Q581,435 608,446 Q637,432 635,463.5 Q656,486 626,494.5 Q611.5,521 594,495 Q565,489 583,465.5" />
-				<circle class="flower-center" cx="609.5" cy="473" r="7" />
-			</g>
+      <div style="opacity: 1; position: absolute" class="loadingAnimated">
+        <lottie-player
+          src="https://assets9.lottiefiles.com/packages/lf20_tFO6q20zPw.json"
+          background="transparent"
+          speed="1"
+          style="width: 350px; height: 350px"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
 
-			<g id="flower6" transform="translate(145,285) scale(0.75)">
-				<path class="colorset1" d="M583,465.5 Q581,435 608,446 Q637,432 635,463.5 Q656,486 626,494.5 Q611.5,521 594,495 Q565,489 583,465.5" />
-				<circle class="flower-center" cx="609.5" cy="473" r="7" />
-			</g>
-			<g id="flower7" transform="translate(155,110) scale(0.58)">
-				<path class="colorset1" d="M583,465.5 Q581,435 608,446 Q637,432 635,463.5 Q656,486 626,494.5 Q611.5,521 594,495 Q565,489 583,465.5" />
-				<circle class="flower-center" cx="609.5" cy="473" r="7" />
-			</g>
-			<g id="flower8" transform="translate(285,105) scale(0.4)">
-				<path class="flower-pink" d="M583,465.5 Q581,435 608,446 Q637,432 635,463.5 Q656,486 626,494.5 Q611.5,521 594,495 Q565,489 583,465.5" />
-				<circle class="flower-center" cx="609.5" cy="473" r="7" />
-			</g>
+      <h4 class="nametag">Hai Billa Sayang</h4>
+      <h4 class="nametag">Gatau Mau Ngomong Apa</h4>
+      <h4 class="nametag">Intinya Makasih</h4>
+      <h4 class="nametag">Makasih Buat Semuanya</h4>
+      <h4 class="nametag">Aku Sayang Kamu</h4>
+      <h4 class="nametag">Udah Ah Cape</h4>
+    </div>
 
-    </g>
-		</svg>
-	</div>
-	
-</body>
+    <div
+      style="
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        top: 10px;
+        margin-right: auto;
+        width: 200px; /* Need a specific value to work */
+      "
+    >
+      <p style="font-size: 8px;text-align: center;">Bikin Pake Lottie Buat Ayang</p>
+      <p style="font-size: 8px;text-align: center; margin-top: -18px;">Billa Nu Aing</p>
+    </div>
+  </body>
 </html>
