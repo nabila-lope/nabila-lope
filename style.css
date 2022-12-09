@@ -336,6 +336,15 @@ section.my-skills h4 {
   animation-direction: normal;
 }
 
+.nametag:nth-of-type(7) {
+  animation-name: fade;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-delay: 27s;
+  animation-duration: 3s;
+  animation-direction: normal;
+}
+
 @keyframes fade {
   0% {
     opacity: 0;
